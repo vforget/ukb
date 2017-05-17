@@ -12,17 +12,14 @@ NR==1 {
 }
 
 NR>1 {
-    
     for (i=2;i<=NF;i++){
 	if ($(i) != "NA") {
 	    print $1, h[i], $(i)
 	}
     }
     if ((NR % 10) == 0){ 
-	printf "\b\b\b\b\b\b\b" > "/dev/stderr"
-	printf "%7d", NR > "/dev/stderr"
+	printf "\b\b\b\b\b\b\b%7d", NR > "/dev/stderr"
     }
-    
 }
 
 END {
