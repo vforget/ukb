@@ -26,7 +26,7 @@ Scripts to parse and analyze UK Biobank data.
 
 ## fetch_tab.awk
 
- Gewk script to subset tab-delimited UK Bionank dataset by list of user-supplied data-fields.
+ Gawk script to subset tab-delimited UK Bionank dataset by list of user-supplied data-fields.
  
 ### Usage
 
