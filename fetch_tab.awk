@@ -3,6 +3,8 @@
 BEGIN {
     # Ensure array indicies are sorted by number ie, column index in the tab file
     PROCINFO["sorted_in"]="@ind_num_asc"
+    FS="\t"
+    OFS="\t"
 }
 
 # Load data-fields from query file
