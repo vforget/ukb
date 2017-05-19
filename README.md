@@ -32,13 +32,13 @@ Scripts to parse and analyze UK Biobank data.
 
     gawk -f fetch_tab.awk data-fields.txt ukb####.tab | gzip -c > ukb####_fetch.tab.gz
 
- File **data-fields.txt** contains a line of data-field identifiers, one per line. Example:
+ File **data-fields.txt** contains data-field identifiers, one per line. Example:
  
     21022
-	52
-	34
-	31
+    52
+    34
+    31
 
 ### Output
 
- Output is subset of input UK Biobank dataset by the supplied data-fields.  The format of the file remains as tab-delimited, and data-fields retain original order. For each data-field, all instance and items are output. All participants are output.
+ Output is a subset of input UK Biobank dataset by the supplied data-fields.  The format of the file remains tab-delimited, and data-fields retain original order. For each data-field, all instance and items are output. All participants are output.
