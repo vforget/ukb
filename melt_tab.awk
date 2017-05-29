@@ -1,4 +1,5 @@
 BEGIN {
+    FS="\t"
     OFS="\t"
     print "eid", "df", "instnum", "itemnum", "value"
 }
