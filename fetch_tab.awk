@@ -5,6 +5,7 @@ BEGIN {
     PROCINFO["sorted_in"]="@ind_num_asc"
     FS="\t"
     OFS="\t"
+    found=0
 }
 
 # Load data-fields from query file
@@ -20,7 +21,8 @@ FNR==1 && NR!=1 {
     for (i=2;i<NF;i++){
 	split($(i),a,".")
 	if (a[2] in ql){
-	    printf "Found data-field %s at col=%s, name=%s\n", a[2], i, $(i) > "/dev/stderr"
+	    found++
+	    printf "Found data-field %s at col=%s, name=%s, count=%s\n", a[2], i, $(i), found > "/dev/stderr"
 	    printf "\t%s", $(i)
 	    dl[i]=$(i)
 	    fl[a[2]]=a[2]
